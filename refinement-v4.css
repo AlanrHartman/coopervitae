@@ -1,0 +1,204 @@
+/* COOPERVITAE — Natural Motion V4 / Editorial Density
+   A tighter layout without sacrificing the pinned narrative or the films.
+   Loaded after immersive.css so the visual identity and interactions remain intact. */
+:root {
+  --section-space: clamp(72px, 8vw, 104px);
+  --section-space-end: clamp(70px, 7vw, 96px);
+  --content-rhythm: clamp(16px, 2vw, 26px);
+}
+
+/* More intentional typographic rhythm rather than isolated large headlines. */
+.reveal { transform: translateY(14px); transition-duration: .72s; }
+.kicker { margin-bottom: 14px; }
+.h2 { margin-bottom: 17px; text-wrap: balance; }
+.lead { margin: 18px 0 23px; line-height: 1.56; }
+.scene-inner {
+  padding-top: var(--section-space);
+  padding-bottom: var(--section-space-end);
+}
+
+/* ACT 01 — Shorten the empty tail after the hero without cropping the film. */
+.origin { height: 117svh; }
+.origin-content { padding-bottom: 8px; }
+.origin .lead { margin-top: 20px; margin-bottom: 25px; }
+.origin .signal-pill { margin-bottom: 17px; }
+.origin .scroll-cue { margin-top: 26px; }
+
+/* ACT 02 — Editorial story: compact copy, prominent photography. */
+.territory { min-height: auto; }
+.territory .scene-inner { padding-top: clamp(84px, 9vw, 124px); padding-bottom: clamp(76px, 8vw, 112px); }
+.territory-grid { grid-template-columns: 1.03fr .97fr; gap: clamp(25px, 4vw, 62px); }
+.territory .lead { margin: 17px 0 20px; max-width: 650px; }
+.territory .quote { display:block; margin: 18px 0 0; font-size: clamp(23px, 2.75vw, 38px); }
+.territory-visual { aspect-ratio: 1/1.03; max-height: 555px; }
+.fact { margin-top: 22px; padding-top: 15px; gap: 16px; }
+.fact-number { font-size: clamp(34px, 3.7vw, 51px); }
+.ambient-territory::before { opacity: .12; }
+
+/* ACT 03 — Reduce the long wait before the interface is revealed. */
+.transform { min-height: 190svh; }
+.transform-surface { height: 90svh; }
+.transform-copy { top: 25%; }
+.transform-step-label { bottom: 6%; }
+
+/* ACT 04 — Nine chapters remain, with less scrolling per chapter. */
+.product-pin { padding-top: 72px; padding-bottom: 33px; }
+.product-header { margin-bottom: 12px; }
+.product-header .kicker { margin-bottom: 7px; }
+.product-layout { gap: 19px; grid-template-columns: minmax(0, 1fr) 235px; }
+.chapter-aside { padding-top: 5px; }
+.chapter-no { font-size: clamp(62px, 6.1vw, 92px); margin-bottom: 5px; }
+.chapter-eyebrow { margin-bottom: 9px; }
+.chapter-name { margin-bottom: 11px; }
+.chapter-copy { margin-bottom: 12px; min-height: 55px; line-height: 1.5; }
+.chapters { max-height: 175px; margin-top: 13px; gap: 2px; }
+.chapters button { padding: 6px 9px; }
+.screen-guide { margin-top: 10px; }
+.chapter-progress { margin-top: 11px; }
+.product-foot { margin-top: 9px; font-size: 9px; }
+.product-space { height: 545svh; }
+.product-more { padding-top: 49px; padding-bottom: 54px; gap: 24px; }
+.product-more h3 { margin-bottom: 12px; }
+.product-more p { margin: 10px 0 0; line-height: 1.55; }
+
+/* ACT 05 — Bring the two sets of content closer to the heading. */
+.value { min-height: auto; }
+.value .scene-inner { padding-top: 94px; padding-bottom: 95px; }
+.value .h2 { max-width: 950px; }
+.value .lead { max-width: 780px; }
+.value-grid { margin-top: 41px; }
+.value-grid article { padding: 21px 17px 22px 0; min-height: 159px; margin-right: 17px; }
+.value-grid .num { margin-bottom: 17px; }
+.value-grid h3 { font-size: 20px; margin-bottom: 8px; }
+.value-grid p { line-height: 1.53; }
+.verified { margin-top: 39px; gap: 20px; }
+.source-card { padding: 21px 24px; }
+.source-card strong { margin: 8px 0 4px; }
+.source-card p { line-height: 1.48; margin-bottom: 10px; }
+.ambient-value::before { opacity: .077; }
+
+/* ACT 06 — Steps are grouped as a clear action plan. */
+.business { min-height: auto; }
+.business .scene-inner { padding-top: 93px; padding-bottom: 89px; }
+.business-steps { margin-top: 39px; gap: 17px; }
+.business-steps article { padding-top: 19px; }
+.business-steps h3 { margin: 10px 0 8px; }
+.business-note { margin-top: 29px; font-size: 13px; }
+
+/* ACT 07 — Shorter outro and disclaimer, still comfortably legible. */
+.closing { min-height: 88svh; }
+.closing .scene-inner { padding-top: 90px; padding-bottom: 76px; }
+.closing .lead { margin: 20px 0 25px; }
+.closing-notice { margin-top: 34px; }
+.sources { padding-top: 20px; padding-bottom: 25px; }
+
+/* Smaller laptops and tablets: keep cards, photographs and text visually related. */
+@media (max-width: 1100px) {
+  .territory-grid { gap: clamp(20px, 3.2vw, 40px); }
+  .product-layout { grid-template-columns: minmax(0, 1fr) 206px; gap: 14px; }
+  .product-pin { padding-top: 72px; padding-bottom: 26px; }
+  .value-grid article { margin-right: 10px; min-height: 172px; }
+}
+
+/* Phones: one continuous vertical reading flow with compact spacing. */
+@media (max-width: 760px) {
+  :root { --section-space: 76px; --section-space-end: 67px; }
+  .kicker { margin-bottom: 11px; }
+  .h2 { margin-bottom: 14px; }
+  .lead { margin: 15px 0 20px; line-height: 1.52; }
+  .scene-inner { padding-left: 24px; padding-right: 24px; }
+  .origin { height: 110svh; }
+  .origin-content { padding-bottom: 0; }
+  .origin .lead { margin-top: 17px; margin-bottom: 22px; }
+  .origin .scroll-cue { margin-top: 18px; }
+  .territory .scene-inner { padding-top: 75px; padding-bottom: 68px; }
+  .territory-grid { grid-template-columns: minmax(0, 1fr); gap: 23px; }
+  .territory .h2 { font-size: clamp(34px, 9vw, 45px); }
+  .territory .quote { font-size: clamp(23px, 5.7vw, 32px); margin-top: 13px; }
+  .territory .lead { margin: 15px 0; }
+  .fact { margin-top: 18px; padding-top: 14px; }
+  .territory-visual { aspect-ratio: 1.43; max-height: 330px; }
+  .transform { min-height: 190svh; }
+  .transform-surface { height: 90svh; }
+  .transform-copy { top: 27%; }
+  .product-pin { padding: 68px 17px 23px; }
+  .product-layout { gap: 10px; }
+  .product-header { margin-bottom: 9px; }
+  .chapter-name { margin-bottom: 6px; }
+  .chapter-copy { margin-bottom: 4px; min-height: 0; }
+  .chapters { margin-top: 6px; gap: 7px; }
+  .chapters button { padding: 7px 8px; }
+  .screen-guide { margin-top: 8px; }
+  .screen-guide button { padding: 8px 9px; }
+  .chapter-progress { margin-top: 8px; }
+  .product-space { height: 585svh; }
+  .product-more { padding: 42px 24px 49px; gap: 17px; }
+  .value .scene-inner { padding-top: 75px; padding-bottom: 70px; }
+  .value-grid { margin-top: 29px; }
+  .value-grid article { min-height: 144px; margin-right: 10px; padding-top: 18px; padding-bottom: 18px; }
+  .value-grid .num { margin-bottom: 12px; }
+  .value-grid h3 { margin-bottom: 6px; }
+  .verified { margin-top: 26px; gap: 13px; }
+  .source-card { padding: 19px 21px; }
+  .business .scene-inner { padding-top: 78px; padding-bottom: 73px; }
+  .business-steps { margin-top: 29px; gap: 13px; }
+  .business-steps article { padding-top: 15px; }
+  .business-note { margin-top: 22px; }
+  .closing { min-height: 84svh; }
+  .closing .scene-inner { padding-top: 81px; padding-bottom: 68px; }
+  .closing-notice { margin-top: 25px; }
+}
+@media (max-width: 400px) {
+  .territory .scene-inner { padding-top: 70px; }
+  .territory-visual { aspect-ratio: 1.55; }
+  .value-grid article { min-height: 142px; }
+  .source-card { padding: 17px 18px; }
+  .product-pin { padding: 67px 14px 18px; }
+  .product-space { height: 605svh; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal { transform: none !important; }
+}
+
+/* Mobile tour: make the nine chapters directly discoverable instead of
+   leaving an empty lower half of the pinned slide. */
+@media (max-width:760px) {
+  .chapters {
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:4px 9px;
+    max-height:min(29svh,214px);
+    overflow-x:hidden;
+    overflow-y:auto;
+    padding-bottom:0;
+    margin-top:12px;
+  }
+  .chapters button {
+    white-space:normal;
+    min-height:33px;
+    font-size:10px;
+    line-height:1.25;
+    border-left:1px solid rgba(205,207,185,.33);
+    border-bottom:0;
+    padding:7px 8px;
+  }
+  .chapters button[aria-current="step"] {
+    border-bottom:0;
+    border-left:2px solid var(--gold);
+  }
+  .chapter-aside { flex:0 1 auto; }
+  .product-layout { flex:1; justify-content:center; }
+  .product-header { flex-shrink:0; }
+}
+@media (max-width:400px) and (max-height:730px) {
+  .chapters { max-height:130px; }
+  .chapter-copy { font-size:11px; line-height:1.4; }
+  .product-layout { justify-content:flex-start; }
+}
+@media (max-width:760px) {
+  .product-pin { justify-content:center; }
+  .product-layout { flex:0 1 auto; justify-content:flex-start; }
+}
+@media (max-width:400px) and (max-height:730px) {
+  .product-pin { justify-content:flex-start; }
+}

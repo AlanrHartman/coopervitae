@@ -1,0 +1,53 @@
+COOPERVITAE — APRESENTAÇÃO INTERATIVA V7
+PACOTE PRONTO PARA HOSPEDAGEM (HTML, CSS, JS E VÍDEOS)
+
+ESTRUTURA OBRIGATÓRIA
+  index.html
+  assets/      (CSS, JavaScript, imagens e vídeos)
+  .nojekyll    (compatibilidade com GitHub Pages)
+
+PUBLIQUE SEM ALTERAR A ESTRUTURA
+1. NETLIFY (MAIS SIMPLES)
+   - Entre em https://app.netlify.com/drop
+   - Extraia este ZIP no computador.
+   - Arraste a PASTA extraída para a área de publicação manual (drop).
+   - O Netlify fornecerá um endereço público; é possível configurar domínio próprio.
+
+2. CPANEL / HOSPEDAGEM TRADICIONAL
+   - Abra Gerenciador de Arquivos > public_html (ou a raiz do subdomínio).
+   - Envie o ZIP e extraia o CONTEÚDO diretamente nessa pasta.
+   - index.html deve ficar na raiz, e a pasta assets ao lado.
+   - Teste o endereço HTTPS do domínio.
+
+3. VERCEL
+   - Crie um novo projeto estático a partir de um repositório com estes arquivos.
+   - Sem framework e sem comando de build.
+   - Diretório de saída: raiz do projeto (pasta onde está index.html).
+
+4. GITHUB PAGES
+   - Crie um repositório dedicado para esta apresentação, e envie index.html e assets.
+   - Settings > Pages > Deploy from a branch; escolha main e /(root).
+   - O arquivo .nojekyll já foi incluído. Não sobrescreva o repositório do site Lovable.
+
+TESTE APÓS PUBLICAR
+ - A abertura deve reproduzir o vídeo do cafezal, sem áudio.
+ - O ato de implantação também deve ter vídeo de fundo.
+ - Os 9 capítulos do tour devem responder à rolagem e aos botões.
+ - O menu de categorias deve navegar pelas explicações da apresentação.
+ - O botão para o protótipo real abre um site externo (Lovable).
+ - A visualização embutida do Lovable pode ser bloqueada pelo próprio serviço.
+ - Em rede lenta, os vídeos podem carregar progressivamente; os posters servem como alternativa.
+
+AVISOS
+ - Este é um site estático, sem banco de dados e sem necessidade de instalar Node.
+ - A apresentação pode ser pública, dependendo das configurações da hospedagem.
+ - É uma proposta independente, não um portal institucional oficial da Coopervitae.
+ - Dados de mercado, IA e integrações do protótipo dependem de validação.
+ - O upload deste pacote NÃO altera o site hospedado no Lovable ou o repositório atual.
+
+ARQUIVOS
+ - index.html: página principal
+ - assets/*.css: estilos
+ - assets/immersive.js: interações e efeitos de rolagem
+ - assets/*.jpg e *.webp: capas e capturas
+ - assets/*.mp4: vídeos (sem depender de serviços de vídeo externos)

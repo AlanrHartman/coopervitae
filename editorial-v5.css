@@ -1,0 +1,24 @@
+/* V5 — direção editorial: persuasão com clareza, sem inflar espaçamentos */
+.value .scene-inner{padding-top:clamp(90px,10vw,130px);padding-bottom:clamp(88px,9vw,125px)}
+.value .h2{max-width:1100px;font-size:clamp(36px,4.8vw,68px)}
+.value-grid{margin-top:clamp(35px,4vw,58px)}
+.value-grid article{min-height:195px}
+.value-grid .num{margin-bottom:24px}
+.value-grid h3{font-size:clamp(18px,1.8vw,23px)}
+.audience-strip{margin-top:clamp(35px,5vw,64px);padding:28px 0;border-top:1px solid #2744313c;border-bottom:1px solid #2744313c}
+.audience-head{display:flex;align-items:baseline;flex-wrap:wrap;gap:10px 22px;margin-bottom:22px}
+.audience-eyebrow{color:#75633f;font-size:10px;letter-spacing:.18em;font-weight:800}
+.audience-head strong{color:#214832;font-size:clamp(18px,2.2vw,25px);letter-spacing:-.035em}
+.audience-benefits{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.audience-benefits>div{padding:4px clamp(10px,2.2vw,26px) 4px 0;border-right:1px solid #2744312c}
+.audience-benefits>div:last-child{border:0}
+.audience-benefits span{display:block;color:#82704f;font-size:10px;letter-spacing:.13em;font-weight:750;margin-bottom:11px}
+.audience-benefits b{display:block;color:#143e2b;font-size:clamp(17px,1.6vw,21px);letter-spacing:-.035em;line-height:1.18}
+.audience-benefits p{color:#4d6355;line-height:1.55;margin:9px 0 0;font-size:12px}
+.verified{margin-top:clamp(35px,4vw,55px)}
+.business-steps{margin-top:clamp(38px,5vw,65px)}
+.business-note strong{color:#eddbac}
+.product-foot{letter-spacing:.07em}
+.chapter-copy{line-height:1.65}
+@media(max-width:800px){.audience-benefits{grid-template-columns:1fr;gap:18px}.audience-benefits>div{padding:0 0 17px;border-right:0;border-bottom:1px solid #27443128}.audience-benefits>div:last-child{border:0;padding:0}.value-grid article{min-height:auto}.product-foot{letter-spacing:0}}
+@media(max-width:550px){.origin .title{font-size:clamp(46px,12vw,74px)}.origin .lead{font-size:15px;line-height:1.55}.territory .h2{font-size:clamp(36px,10vw,54px)}.territory .quote{font-size:23px}.value .h2{font-size:clamp(35px,10vw,50px)}.product-header .h2{font-size:clamp(28px,8.7vw,40px)}.product-more h3{font-size:clamp(28px,8vw,43px)}.business .h2{font-size:clamp(35px,9.5vw,52px)}.closing .title{font-size:clamp(42px,10.8vw,74px)}}
